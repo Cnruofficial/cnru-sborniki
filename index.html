@@ -1,164 +1,183 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>Подборки</title>
-  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600&family=Jost&display=swap" rel="stylesheet">
-  <style>
-    body {
-      background: #ffffff;
-      font-family: 'Jost', sans-serif;
-      margin: 0;
-      padding: 20px;
-    }
-    .title {
-      font-family: 'Unbounded', sans-serif;
-      color: #98000;
-      font-size: 2em;
-      margin: 20px 0;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .item {
-      position: relative;
-      overflow: hidden;
-      border-radius: 12px;
-      text-align: center;
-    }
-    .item img {
-      width: 100%;
-      height: auto;
-      display: block;
-      transition: all 0.4s ease;
-    }
-    .item:hover img {
-      filter: blur(3px) brightness(0.8);
-      transform: scale(1.05);
-    }
-    .name {
-      font-family: 'Unbounded', sans-serif;
-      color: #98000;
-      margin-top: 10px;
-      font-size: 1.1em;
-    }
-    .play-button {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: #98000;
-      color: #ffffff;
-      padding: 10px 20px;
-      border-radius: 30px;
-      font-size: 14px;
-      font-family: 'Unbounded', sans-serif;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-    .item:hover .play-button {
-      opacity: 1;
-    }
-    a {
-      text-decoration: none;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подборка фильмов и сериалов</title>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700&family=Jost:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Jost', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #ffffff;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1, h2 {
+            font-family: 'Unbounded', sans-serif;
+            color: #980000;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .item {
+            display: inline-block;
+            margin: 10px;
+            position: relative;
+            text-align: center;
+        }
+        .item img {
+            width: 200px;
+            height: auto;
+            transition: filter 0.3s ease;
+        }
+        .item:hover img {
+            filter: blur(3px);
+        }
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px;
+            height: 50px;
+            background-color: #980000;
+            border-radius: 50%;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .item:hover .play-button {
+            display: flex;
+        }
+        .play-button::before {
+            content: '▶';
+            color: #ffffff;
+            font-size: 24px;
+        }
+        .item-title {
+            font-family: 'Unbounded', sans-serif;
+            color: #980000;
+            margin: 10px 0 5px;
+            font-size: 16px;
+        }
+        .item-year {
+            color: #333;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <h1>Подборка фильмов и сериалов</h1>
 
-  <div class="title">Фильмы</div>
-  <div class="grid">
-    <a href="https://www.cnruofficial.online/kategoryi/films/vne-Yurisdiktsii-2025">
-      <div class="item">
-        <img src="https://i.postimg.cc/6pc47wdr/image.jpg" alt="">
-        <div class="play-button">СМОТРЕТЬ</div>
-        <div class="name">Вне Юрисдикции (2025)</div>
-      </div>
-    </a>
-    <a href="https://www.cnruofficial.online/kategoryi/films/ostav-mir-pozadi-2023-smotret-besplatno">
-      <div class="item">
-        <img src="https://i.postimg.cc/yN5d9NWZ/2023-1280x720.jpg" alt="">
-        <div class="play-button">СМОТРЕТЬ</div>
-        <div class="name">Оставь мир позади (2023)</div>
-      </div>
-    </a>
-    <a href="https://www.cnruofficial.online/kategoryi/films/Devichnik-uboynaya-noch-2023">
-      <div class="item">
-        <img src="https://i.postimg.cc/Bb2XJGS1/image.jpg" alt="">
-        <div class="play-button">СМОТРЕТЬ</div>
-        <div class="name">Девичник: Убойная ночь (2023)</div>
-      </div>
-    </a>
-    <a href="https://www.cnruofficial.online/kategoryi/films/ledi-viktorina-2023">
-      <div class="item">
-        <img src="https://i.postimg.cc/c4mLhhrZ/2023.jpg" alt="">
-        <div class="play-button">СМОТРЕТЬ</div>
-        <div class="name">Леди Викторина (2023)</div>
-      </div>
-    </a>
-    <a href="https://www.cnruofficial.online/kategoryi/films/drop-2025-smotret-besplatno">
-      <div class="item">
-        <img src="https://i.postimg.cc/DZXzcKbY/2025-1280x720.jpg" alt="">
-        <div class="play-button">СМОТРЕТЬ</div>
-        <div class="name">Дроп (2025)</div>
-      </div>
-    </a>
-    <a href="https://www.cnruofficial.online/kategoryi/films/mat-nevesty-2024">
-      <div class="item">
-        <img src="https://i.postimg.cc/JhdyqqYt/image.jpg" alt="">
-        <div class="play-button">СМОТРЕТЬ</div>
-        <div class="name">Мать Невесты (2024)</div>
-      </div>
-    </a>
-    <a href="https://www.cnruofficial.online/kategoryi/films/delo-maldoror-2024-smotret-besplatno">
-      <div class="item">
-        <img src="https://i.postimg.cc/rFCKbcZB/image.jpg" alt="">
-        <div class="play-button">СМОТРЕТЬ</div>
-        <div class="name">Дело Мальдорор (2024)</div>
-      </div>
-    </a>
-    <a href="https://www.cnruofficial.online/kategoryi/films/opasnaya-igra-sloun-2016-smotret-besplatno">
-      <div class="item">
-        <img src="https://i.postimg.cc/qBKts2sM/image.jpg" alt="">
-        <div class="play-button">СМОТРЕТЬ</div>
-        <div class="name">Опасная игра Слоун (2016)</div>
-      </div>
-    </a>
-  </div>
+        <div class="section">
+            <h2>Сериалы</h2>
+            <div class="item">
+                <a href="https://www.cnruofficial.online/kategoryi/serialy/novichok-federali-2022">
+                    <img src="https://i.postimg.cc/hGGzTwrH/image.jpg" alt="Новичок: Федералы">
+                    <div class="play-button"></div>
+                </a>
+                <div class="item-title">Новичок: Федералы</div>
+                <div class="item-year">2022</div>
+            </div>
+            <div class="item">
+                <a href="https://www.cnruofficial.online/kategoryi/serialy/etoile-2025-smotret-besplatno">
+                    <img src="https://i.postimg.cc/FzBbJSGy/Etoile-2025.jpg" alt="Этуаль">
+                    <div class="play-button"></div>
+                </a>
+                <div class="item-title">Этуаль</div>
+                <div class="item-year">2025</div>
+            </div>
+            <div class="item">
+                <a href="https://www.cnruofficial.online/kategoryi/serialy/druzheskoye-sopernichestvo-2025">
+                    <img src="https://i.postimg.cc/gjykfqsV/2025-1280x720.jpg" alt="Дружеское Соперничество">
+                    <div class="play-button"></div>
+                </a>
+                <div class="item-title">Дружеское Соперничество</div>
+                <div class="item-year">2025</div>
+            </div>
+            <div class="item">
+                <a href="https://www.cnruofficial.online/kategoryi/serialy/chistka-2025">
+                    <img src="https://i.postimg.cc/L5F8C0t4/2025-1280x720.jpg" alt="Чистка">
+                    <div class="play-button"></div>
+                </a>
+                <div class="item-title">Чистка</div>
+                <div class="item-year">2025</div>
+            </div>
+        </div>
 
-  <div class="title">Сериалы</div>
-  <div class="grid">
-    <a href="https://www.cnruofficial.online/kategoryi/serialy/etoile-2025-smotret-besplatno">
-      <div class="item">
-        <img src="https://i.postimg.cc/FzBbJSGy/Etoile-2025.jpg" alt="">
-        <div class="play-button">СМОТРЕТЬ</div>
-        <div class="name">Этуаль (2025)</div>
-      </div>
-    </a>
-    <a href="https://www.cnruofficial.online/kategoryi/serialy/druzheskoye-sopernichestvo-2025">
-      <div class="item">
-        <img src="https://i.postimg.cc/gjykfqsV/2025-1280x720.jpg" alt="">
-        <div class="play-button">СМОТРЕТЬ</div>
-        <div class="name">Дружеское Соперничество (2025)</div>
-      </div>
-    </a>
-    <a href="https://www.cnruofficial.online/kategoryi/serialy/novichok-federali-2022">
-      <div class="item">
-        <img src="https://i.postimg.cc/hGGzTwrH/image.jpg" alt="">
-        <div class="play-button">СМОТРЕТЬ</div>
-        <div class="name">Новичок Федералы (2022)</div>
-      </div>
-    </a>
-    <a href="https://www.cnruofficial.online/kategoryi/serialy/chistka-2025">
-      <div class="item">
-        <img src="https://i.postimg.cc/L5F8C0t4/2025-1280x720.jpg" alt="">
-        <div class="play-button">СМОТРЕТЬ</div>
-        <div class="name">Чистка (2025)</div>
-      </div>
-    </a>
-  </div>
-
+        <div class="section">
+            <h2>Фильмы</h2>
+            <div class="item">
+                <a href="https://www.cnruofficial.online/kategoryi/films/opasnaya-igra-sloun-2016-smotret-besplatno">
+                    <img src="https://i.postimg.cc/qBKts2sM/image.jpg" alt="Опасная игра Слоун">
+                    <div class="play-button"></div>
+                </a>
+                <div class="item-title">Опасная игра Слоун</div>
+                <div class="item-year">2016</div>
+            </div>
+            <div class="item">
+                <a href="https://www.cnruofficial.online/kategoryi/films/ostav-mir-pozadi-2023-smotret-besplatno">
+                    <img src="https://i.postimg.cc/yN5d9NWZ/2023-1280x720.jpg" alt="Оставь мир позади">
+                    <div class="play-button"></div>
+                </a>
+                <div class="item-title">Оставь мир позади</div>
+                <div class="item-year">2023</div>
+            </div>
+            <div class="item">
+                <a href="https://www.cnruofficial.online/kategoryi/films/Devichnik-uboynaya-noch-2023">
+                    <img src="https://i.postimg.cc/Bb2XJGS1/image.jpg" alt="Девичник: Убойная ночь">
+                    <div class="play-button"></div>
+                </a>
+                <div class="item-title">Девичник: Убойная ночь</div>
+                <div class="item-year">2023</div>
+            </div>
+            <div class="item">
+                <a href="https://www.cnruofficial.online/kategoryi/films/ledi-viktorina-2023">
+                    <img src="https://i.postimg.cc/c4mLhhrZ/2023.jpg" alt="Леди Викторина">
+                    <div class="play-button"></div>
+                </a>
+                <div class="item-title">Леди Викторина</div>
+                <div class="item-year">2023</div>
+            </div>
+            <div class="item">
+                <a href="https://www.cnruofficial.online/kategoryi/films/mat-nevesty-2024">
+                    <img src="https://i.postimg.cc/JhdyqqYt/image.jpg" alt="Мать Невесты">
+                    <div class="play-button"></div>
+                </a>
+                <div class="item-title">Мать Невесты</div>
+                <div class="item-year">2024</div>
+            </div>
+            <div class="item">
+                <a href="https://www.cnruofficial.online/kategoryi/films/delo-maldoror-2024-smotret-besplatno">
+                    <img src="https://i.postimg.cc/rFCKbcZB/image.jpg" alt="Дело Мальдорор">
+                    <div class="play-button"></div>
+                </a>
+                <div class="item-title">Дело Мальдорор</div>
+                <div class="item-year">2024</div>
+            </div>
+            <div class="item">
+                <a href="https://www.cnruofficial.online/kategoryi/films/vne-Yurisdiktsii-2025">
+                    <img src="https://i.postimg.cc/6pc47wdr/image.jpg" alt="Вне Юрисдикции">
+                    <div class="play-button"></div>
+                </a>
+                <div class="item-title">Вне Юрисдикции</div>
+                <div class="item-year">2025</div>
+            </div>
+            <div class="item">
+                <a href="https://www.cnruofficial.online/kategoryi/films/drop-2025-smotret-besplatno">
+                    <img src="https://i.postimg.cc/DZXzcKbY/2025-1280x720.jpg" alt="Дроп">
+                    <div class="play-button"></div>
+                </a>
+                <div class="item-title">Дроп</div>
+                <div class="item-year">2025</div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
